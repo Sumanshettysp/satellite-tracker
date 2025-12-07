@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Satellite Passes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h1>Upcoming Satellite Passes</h1>
+
+{% if passes %}
+<table border="1">
+    <tr>
+        <th>Satellite</th>
+        <th>Location</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Duration (sec)</th>
+        <th>Visibility</th>
+    </tr>
+
+    {% for p in passes %}
+    <tr>
+        <td>{{ p.satellite.name }}</td>
+        <td>{{ p.location.name }}</td>
+        <td>{{ p.start_time }}</td>
+        <td>{{ p.end_time }}</td>
+        <td>{{ p.duration }}</td>
+        <td>{{ p.visibility }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No pass predictions available.</p>
+{% endif %}
+
+<br>
+<a href="/">← Back to Home</a>
+
+</body>
+</html>

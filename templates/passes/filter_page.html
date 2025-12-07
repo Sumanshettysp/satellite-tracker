@@ -1,0 +1,29 @@
+<!-- templates/passes/filter_page.html -->
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pass Events</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mini.css@3.0.1/dist/mini-default.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Filter Pass Events</h1>
+    <section>
+      <h3>Filters</h3>
+      {{ form }}
+    </section>
+
+    <section>
+      <h3>Results</h3>
+      {{ table }}
+    </section>
+
+    <p>
+      <a href="{% url 'passes:add_location' %}">Add Location</a> |
+      <a href="{% url 'passes:add_satellite' %}">Add Satellite</a>
+    </p>
+  </main>
+</body>
+</html>

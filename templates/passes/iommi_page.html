@@ -1,0 +1,18 @@
+<!-- templates/passes/iommi_page.html -->
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Iommi Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mini.css@3.0.1/dist/mini-default.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>{{ iommi_object.name }}</h1>
+    {{ iommi_object }}
+    <p><a href="{% url 'passes:filter_passes' %}">Back to Passes</a></p>
+  </main>
+</body>
+</html>
+

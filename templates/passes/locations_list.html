@@ -1,0 +1,7 @@
+<h1>Satellites</h1>
+
+<ul>
+    {% for s in satellites %}
+    <li>{{ s.name }} — NORAD {{ s.norad_id }}</li>
+    {% endfor %}
+</ul>
