@@ -27,7 +27,8 @@ class PassEvent(models.Model):
     max_elevation = models.FloatField()
     duration = models.FloatField()
     visibility = models.CharField(max_length=50)
-
+    direction = models.CharField(max_length=50, blank=True)
+    source = models.CharField(max_length=50, default="N2YO")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
